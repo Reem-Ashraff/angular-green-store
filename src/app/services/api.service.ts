@@ -12,16 +12,16 @@ export class ApiService {
 
   user_id:any;
   userdata:any = null;
-  baseURL0 = "https://greenstore.infinityfreeapp.com";
-  baseURL = "https://greenstore.infinityfreeapp.com/get_plants.php";
-  categoriesURL = "https://greenstore.infinityfreeapp.com/get_categories.php";
-  insertURL="https://greenstore.infinityfreeapp.com/signup_api.php";
-  loginURL = "https://greenstore.infinityfreeapp.com/login.php";
-  insertCartURL = "https://greenstore.infinityfreeapp.com/insertToCart.php";
-  userURL = "https://greenstore.infinityfreeapp.com/get_user.php";
-  getcartURL = "https://greenstore.infinityfreeapp.com/get_cart.php";
-  deleteitemURL = "https://greenstore.infinityfreeapp.com/delete_cartItem.php";
-  deleteplantURL = "https://greenstore.infinityfreeapp.com/delete_plant.php";
+  baseURL0 = "https://greenstore.infinityfreeapp.com/api";
+  baseURL = "https://greenstore.infinityfreeapp.com/api/get_plants.php";
+  categoriesURL = "https://greenstore.infinityfreeapp.com/api/get_categories.php";
+  insertURL="https://greenstore.infinityfreeapp.com/api/signup_api.php";
+  loginURL = "https://greenstore.infinityfreeapp.com/api/login.php";
+  insertCartURL = "https://greenstore.infinityfreeapp.com/api/insertToCart.php";
+  userURL = "https://greenstore.infinityfreeapp.com/api/get_user.php";
+  getcartURL = "https://greenstore.infinityfreeapp.com/api/get_cart.php";
+  deleteitemURL = "https://greenstore.infinityfreeapp.com/api/delete_cartItem.php";
+  deleteplantURL = "https://greenstore.infinityfreeapp.com/api/delete_plant.php";
   addcategoryURL = "https://greenstore.infinityfreeapp.com/add_category.php";
   deletecategoryURL = "https://greenstore.infinityfreeapp.com/delete_category.php";
   categoryItemsURL = "https://greenstore.infinityfreeapp.com/get_categoryitems.php";
