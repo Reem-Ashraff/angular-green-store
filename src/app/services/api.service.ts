@@ -12,9 +12,9 @@ export class ApiService {
 
   user_id:any;
   userdata:any = null;
-  baseURL0 = "https://greenstore.infinityfreeapp.com/api";
-  baseURL = "https://greenstore.infinityfreeapp.com/api/get_plants.php";
-  categoriesURL = "https://greenstore.infinityfreeapp.com/api/get_categories.php";
+  baseURL0 = "/api";
+  baseURL = "/api/get_plants.php";
+  categoriesURL = "/api/get_categories.php";
   insertURL="/api/signup_api.php";
   loginURL = "/api/login.php";
   insertCartURL = "https://greenstore.infinityfreeapp.com/api/insertToCart.php";
