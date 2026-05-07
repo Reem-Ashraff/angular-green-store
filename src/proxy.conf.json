@@ -1,7 +1,0 @@
-{
-  "/api": {
-    "target": "greenstore-api.atwebpages.com",
-    "secure": false,
-    "changeOrigin": true
-  }
-}
