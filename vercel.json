@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/api/(.*)",
+      "source": "/proxy-api/:path*",
       "destination": "greenstore-api.atwebpages.com*"
     }
   ]
