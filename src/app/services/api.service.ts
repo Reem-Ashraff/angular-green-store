@@ -55,11 +55,14 @@ export class ApiService {
   }
   get_cartegory_plants(id:any){
     //const body = JSON.stringify(id);
-    return this.http.get<[]>(this.categoryItemsURL+"?id="+id);
+    //return this.http.get<[]>(this.categoryItemsURL+"?id="+id);
+    return this.http.get<[]>(`${this.baseURL0}/get_categoryitems.php?id=${id}`);
+    
   }
   insert_user(user:any){
     const body = JSON.stringify(user);
-    return this.http.post<[]>(this.insertURL,body);
+    //return this.http.post<[]>(this.insertURL,body);
+    return this.http.post<[]>(`${this.baseURL0}/signup_api.php`,body);
   }
   login_user(user:any){
     const body = JSON.stringify(user);
@@ -76,11 +79,13 @@ export class ApiService {
   }
   addToCart(items:any){
     const body = JSON.stringify(items);
-    return this.http.post<[]>(this.insertCartURL,body);
+    //return this.http.post<[]>(this.insertCartURL,body);
+    return this.http.post<[]>(`${this.baseURL0}/insertToCart.php`,body);
   }
   get_cart(id:any){
     const body = JSON.stringify(id);
     return this.http.post<[]>(this.getcartURL,body);
+    return this.http.post<[]>(`${this.baseURL0}/get_cart.php`,body);
   }
   delete_item(id:any){
     const body = JSON.stringify(id);
