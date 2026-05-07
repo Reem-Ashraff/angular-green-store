@@ -12,7 +12,7 @@ export class ApiService {
 
   user_id:any;
   userdata:any = null;
-  baseURL0 = "https://greenstore.infinityfreeapp.com";
+  baseURL0 = "greenstore.infinityfreeapp.com";
   baseURL = "https://greenstore.infinityfreeapp.com/get_plants.php";
   categoriesURL = "https://greenstore.infinityfreeapp.com/get_categories.php";
   insertURL="https://greenstore.infinityfreeapp.com/signup_api.php";
