@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://angular-green-store.vercel.app*"
+      "destination": "https://greenstore-api.thsite.top*"
     }
   ]
 }
