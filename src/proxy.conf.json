@@ -1,0 +1,7 @@
+{
+  "/api": {
+    "target": "http://your-insecure-link.com",
+    "secure": false,
+    "changeOrigin": true
+  }
+}
