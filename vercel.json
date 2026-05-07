@@ -2,9 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "greenstore-api.atwebpages.com*",
-      "secure": false,
-      "changeOrigin": true
+      "destination": "greenstore-api.atwebpages.com*"
     }
   ]
 }
