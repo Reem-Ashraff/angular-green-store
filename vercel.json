@@ -1,8 +1,8 @@
 {
   "rewrites": [
     {
-      "source": "/proxy-api/:path*",
-      "destination": "http://greenstore-api.atwebpages.com*"
+      "source": "/api/:path*",
+      "destination": "https://greenstore.infinityfreeapp.com*"
     }
   ]
 }
