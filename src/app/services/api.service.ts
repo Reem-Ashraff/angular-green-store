@@ -18,7 +18,7 @@ export class ApiService {
   insertURL="https://greenstore.infinityfreeapp.com/api/signup_api.php";
   loginURL = "/api/login.php";
   insertCartURL = "https://greenstore.infinityfreeapp.com/api/insertToCart.php";
-  userURL = "https://greenstore-api.thsite.top/get_user.php";
+  userURL = "https://greenstore-api.atwebpages.com/get_user.php";
   getcartURL = "https://greenstore-api.thsite.top/get_cart.php";
   deleteitemURL = "https://greenstore.infinityfreeapp.com/api/delete_cartItem.php";
   deleteplantURL = "https://greenstore.infinityfreeapp.com/api/delete_plant.php";
