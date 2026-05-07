@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "http://your-tinkerhost-url.com*"
+      "destination": "https://angular-green-store.vercel.app*"
     }
   ]
 }
