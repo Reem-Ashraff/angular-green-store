@@ -24,18 +24,18 @@ export class ApiService {
   deleteplantURL = "https://greenstore.infinityfreeapp.com/delete_plant.php";
   addcategoryURL = "https://greenstore.infinityfreeapp.com/add_category.php";
   deletecategoryURL = "https://greenstore.infinityfreeapp.com/delete_category.php";
-  categoryItemsURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/get_categoryitems.php";
-  addplantURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/add_plant.php";
-  deletecategorybynameURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/delete_category_byname.php";
-  deleteplantbynameURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/delete_plant_byname.php";
-  updatecategoryURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/update_category.php";
-  updateplantnameURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/update_plantname.php";
-  updateplantpriceURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/update_plantprice.php";
-  updateplantimgURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/update_plantimg.php";
-  updateplantcategoryURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/update_plantcategory.php";
-  allusersURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/get_allusers.php";
-  orderURL= "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/add_order.php";
-  detailsURL= "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/add_details.php";
+  categoryItemsURL = "https://greenstore.infinityfreeapp.com/get_categoryitems.php";
+  addplantURL = "https://greenstore.infinityfreeapp.com/add_plant.php";
+  deletecategorybynameURL = "https://greenstore.infinityfreeapp.com/delete_category_byname.php";
+  deleteplantbynameURL = "https://greenstore.infinityfreeapp.com/delete_plant_byname.php";
+  updatecategoryURL = "https://greenstore.infinityfreeapp.com/update_category.php";
+  updateplantnameURL = "https://greenstore.infinityfreeapp.com/update_plantname.php";
+  updateplantpriceURL = "https://greenstore.infinityfreeapp.com/update_plantprice.php";
+  updateplantimgURL = "https://greenstore.infinityfreeapp.com/update_plantimg.php";
+  updateplantcategoryURL = "https://greenstore.infinityfreeapp.com/update_plantcategory.php";
+  allusersURL = "https://greenstore.infinityfreeapp.com/get_allusers.php";
+  orderURL= "https://greenstore.infinityfreeapp.com/add_order.php";
+  detailsURL= "https://greenstore.infinityfreeapp.com/add_details.php";
 
   setLocalData:any = [];
   storeuser:any;
@@ -46,46 +46,37 @@ export class ApiService {
   }
 
   get_plants(){
-    //return this.http.get<[]>(this.baseURL);
-    return this.http.get<[]>(`${this.baseURL0}/get_plants.php`);
+    return this.http.get<[]>(this.baseURL);
   }
   get_categories(){
-    //return this.http.get<[]>(this.categoriesURL);
-    return this.http.get<[]>(`${this.baseURL0}/get_categories.php`);
+    return this.http.get<[]>(this.categoriesURL);
   }
   get_cartegory_plants(id:any){
     //const body = JSON.stringify(id);
-    //return this.http.get<[]>(this.categoryItemsURL+"?id="+id);
-    return this.http.get<[]>(`${this.baseURL0}/get_categoryitems.php?id=${id}`);
-    
+    return this.http.get<[]>(this.categoryItemsURL+"?id="+id);
   }
   insert_user(user:any){
     const body = JSON.stringify(user);
-    //return this.http.post<[]>(this.insertURL,body);
-    return this.http.post<[]>(`${this.baseURL0}/signup_api.php`,body);
+    return this.http.post<[]>(this.insertURL,body);
   }
   login_user(user:any){
     const body = JSON.stringify(user);
-    //return this.http.post<[]>(this.loginURL,body);
-    return this.http.post<[]>(`${this.baseURL0}/login.php`,body);
+    return this.http.post<[]>(this.loginURL,body);
   }
   get_user(id:any){
     const body = JSON.stringify(id);
-    //return this.http.post<[]>(this.userURL,body);
-    return this.http.post<[]>(`${this.baseURL0}/get_user.php`,body);
+    return this.http.post<[]>(this.userURL,body);
   }
   get_alluser(){
     return this.http.get<[]>(this.allusersURL);
   }
   addToCart(items:any){
     const body = JSON.stringify(items);
-    //return this.http.post<[]>(this.insertCartURL,body);
-    return this.http.post<[]>(`${this.baseURL0}/insertToCart.php`,body);
+    return this.http.post<[]>(this.insertCartURL,body);
   }
   get_cart(id:any){
     const body = JSON.stringify(id);
     return this.http.post<[]>(this.getcartURL,body);
-    return this.http.post<[]>(`${this.baseURL0}/get_cart.php`,body);
   }
   delete_item(id:any){
     const body = JSON.stringify(id);
