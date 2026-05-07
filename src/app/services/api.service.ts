@@ -15,8 +15,8 @@ export class ApiService {
   baseURL0 = "https://greenstore.infinityfreeapp.com/api";
   baseURL = "https://greenstore.infinityfreeapp.com/api/get_plants.php";
   categoriesURL = "https://greenstore.infinityfreeapp.com/api/get_categories.php";
-  insertURL="/api/signup_api.php";
-  loginURL = "/api/login.php";
+  insertURL="https://greenstore.infinityfreeapp.com/signup_api.php";
+  loginURL = "https://greenstore.infinityfreeapp.com/login.php";
   insertCartURL = "https://greenstore.infinityfreeapp.com/api/insertToCart.php";
   userURL = "/proxy-api/get_user.php";
   getcartURL = "https://greenstore-api.thsite.top/get_cart.php";
