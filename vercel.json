@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "http://awardspace.net*"
+      "destination": "http://greenstore-api.atwebpages.com*"
     }
   ]
 }
