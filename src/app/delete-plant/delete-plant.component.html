@@ -1,0 +1,18 @@
+<div class="cover"></div>
+<div class="d-flex justify-content-center align-items-center">
+        <div class="bg-light form d-flex flex-column align-items-center justify-content-center rounded py-4">
+                <div>
+                        <div class="message">{{message}}</div>
+                        <div class="message2">{{message2}}</div>
+                </div>
+                <form [formGroup]="form" class="form-box d-flex flex-column w-75 mt-4">
+                        <div class="mb-4">
+                                <label class="l mb-2" >Plant name</label><br>
+                                <select class="w-100 bg-light rounded i" formControlName="p_name">
+                                        <option *ngFor="let c of items" [value]="c.p_name">{{c.p_name}}</option>
+                                </select>
+                        </div>
+                        <input type="submit" value="Delete Plant" [disabled]="form.invalid" (click)="submit()" class="mb-3 button">
+                </form>
+        </div>
+</div>

@@ -1,0 +1,85 @@
+.header{
+        background-color: white !important;
+        position: sticky;
+        top: 0vmin;
+        padding-top: 3vmin;
+        padding-bottom: 3vmin;
+        width: 100%;
+        box-shadow: 0vmin 0vmin 1vmin gray;
+        z-index: 1000;
+}
+.h-title{
+        font-family:'Times New Roman', Times, serif;
+        font-size: 4.5vmin;
+        letter-spacing: 0.2vmin;
+}
+h1{
+        font-family:'Times New Roman', Times, serif;
+        color: black;
+        font-size: 8vmin;
+        font-weight: 500;
+}
+i{ 
+        font-size: 4vmin;
+        color: rgb(28, 28, 28);
+        transition: 0.3s;
+        cursor: pointer;
+}
+i:hover{
+        color: rgb(61, 149, 61);
+}
+.category{
+        /*border: 0.3vmin solid black;*/
+        box-shadow: 0vmin 0vmin 0.6vmin rgb(0, 0, 0);
+        transition: 0.3s;
+}
+.category:hover{
+        transform: scale(1.05);
+}
+.category h4{
+        color: black;
+        font-size: 4vmin;
+        font-family:'Times New Roman', Times, serif;
+        letter-spacing: 0.15vmin;
+}
+.category a{
+        text-decoration: none;
+        background-color: white;
+        border: 0.3vmin solid rgb(61, 149, 61);
+        color: rgb(61, 149, 61);
+        font-size: 2.7vmin;
+        transition: 0.3s;
+}
+.category .a{
+        text-decoration: none;
+        background-color: rgb(61, 149, 61);
+        border: 0.3vmin solid rgb(61, 149, 61);
+        color: white;
+        font-size: 2.7vmin;
+        transition: 0.3s;
+}
+.category .a:hover{
+        background-color: white;
+        border: 0.3vmin solid rgb(61, 149, 61);
+}
+.category .a:hover .a1{
+        color: rgb(61, 149, 61);
+        background-color: white;
+}
+.category .a1{
+        background-color: rgb(61, 149, 61);
+        color: white;
+        font-size: 2.7vmin;
+        transition: 0.3s;
+}
+.category a:hover{
+        background-color: rgb(61, 149, 61);
+        border: 0.3vmin solid rgb(61, 149, 61);
+        color: white;
+}
+.message{
+        color: rgb(210, 8, 8);
+}
+.message2{
+        color: rgb(61, 149, 61);
+}

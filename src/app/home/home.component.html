@@ -1,0 +1,176 @@
+<div class="home">
+</div>
+<nav class="navbar navbar-expand-lg bg-body-tertiary header">
+        <div class="container-fluid px-4 d-flex">
+                <a class="navbar-brand text-white h-title" href="#">Greenstore</a>
+                <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                        <a class="nav-link active text-white" aria-current="page" href="/home">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                        <a class="nav-link text-white" href="/about">About</a>
+                                </li>
+                                <li class="nav-item">
+                                        <a class="nav-link text-white" href="/plants">Plants</a>
+                                </li>
+                                <li class="nav-item">
+                                        <a class="nav-link text-white" (click)="logout()" href="{{href}}">{{log}}</a>
+                                </li>
+                                <li class="nav-item">
+                                        <a class="nav-link text-white" (click)="cartshown()" id="cart">
+                                                <i class="fa-solid fa-cart-shopping"></i>
+                                                <sup class="rounded-circle">{{num}}</sup>
+                                        </a>
+                                </li>
+                        </ul>
+                </div>
+                <div class="d-flex">
+                        <div class="d-flex text-white align-items-center">
+                                <i class="fa-solid fa-user"></i>
+                                <div class="mx-1">{{username}}</div>
+                        </div>
+                </div>
+        </div>
+</nav>
+<div *ngIf="isShown" class="cart0">
+        <div class="d-flex justify-content-between mt-4 mx-4">
+                <h3>Shopping Cart</h3>
+                <i class="fa-solid fa-xmark c" (click)="closecart()"></i>
+        </div>
+        <hr class="w-100">
+        <div class="items-box">
+                <div *ngFor="let i of cart_elements" class="d-flex align-items-center justify-content-between mx-5 mb-3">
+                        <div class="d-flex align-items-center">
+                                <img [src]="i.item_image" class="cart-img">
+                                <div>
+                                        <h4 class="item-name">{{i.item_name}}</h4>
+                                        <p class="item-price">{{i.item_price}}</p>
+                                </div>
+                        </div>
+                        <i class="fa-solid fa-xmark close rounded-circle" (click)="deleteItem(i.cart_id)"></i>
+                </div>
+        </div>
+        <div *ngIf="Shown" class="w-100 h-75 d-flex justify-content-center align-items-center">
+                <p>No products in the cart.</p>
+        </div>
+        <div class="d-flex justify-content-center b">
+                <button *ngIf="checkShow" class="mb-3" (click)="toplants()">Checkout</button>
+                <button *ngIf="shopShow"  class="mb-3" (click)="toplants()">Continue Shopping</button>
+        </div>
+</div>
+<div class="background-content d-flex align-items-center justify-content-center w-100">
+        <div>
+                <p class="text-white">{{title | uppercase}}</p>
+                <h1 class="text-white">Let's Bring the Spring to<br>Your Home</h1>
+                <button (click)="toplants()">Shop Now</button>
+        </div>
+</div>
+<div class="container-fluid my-5 px-4">
+        <div class=" px-5 head d-flex justify-content-between">
+                <h1>New Plants</h1>
+                <button (click)="toplants()">Shop Now</button>
+        </div>
+        <div class="d-flex justify-content-between flex-wrap my-5 px-5 item">
+                <div *ngFor="let item of items" class="col-12 col-sm-5 col-lg-3 card mb-4 product mx-1">
+                        <img [src]="item.p_image" class="card-img-top" alt="...">
+                        <div class="card-body">
+                                <div class="stars mb-1">
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                </div>
+                                <h5 class="card-title">{{item.p_name}}</h5>
+                                <p class="card-text mb-1 p0">{{item.category_id}}</p>
+                                <p class="card-text p2">${{item.p_price}}</p>
+                                <div class="rounded-circle i0" (click)="additem(item.p_name,item.p_price,item.p_image)">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</div>
+<div class="container-fluid mb-5">
+        <div class="row">
+                <div class="col-md-5 logo">
+                        <img class="w-100 h-auto" src="../../assets/about.jpg">
+                </div>
+                <div class="col-12 col-md-7 col-lg-5 d-flex flex-column justify-content-center story px-5">
+                        <p class="title">OUR STORY</p>
+                        <h1>For People Who Love Plants</h1>
+                        <p class="paragraph">Vivamus quam sociis tristique diam at donec nisl, hendrerit<br>
+                        leo nunc at velit lacinia porttitor a nulla tellus ultrices varius<br>
+                        aliquet sed in placerat.</p>
+                        <p class="paragraph">Facilisis eu faucibus diam cursus pulvinar consectetur purus<br>
+                        sem felis, mauris consectetur nisl vitae gravida ultricies sem<br>
+                        condimentum aliquet ut sed gravida amet vitae euismod<br>
+                        pulvinar volutpat laoreet pharetra.</p>
+                        <button class="mt-3" (click)="hidetext()">Read More</button>
+                        <p *ngIf="nothidden" class="paragraph mt-4">Tincidunt ut pellentesque arcu molestie dolor, nunc feugiat sit mauris semper platea urna,<br>
+                        sapien fermentum venenatis etiam enim ullamcorper phasellus tortor justo sapien<br>
+                        faucibus in adipiscing risus adipiscing bibendum nec eget tincidunt sed.</p>
+                </div>
+        </div>
+</div>
+
+<div class="container-fluid my-5 px-5 block">
+        <div class="row px-4">
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-evenly my-5 section">
+                        <i class="fa-solid fa-lock rounded-circle"></i>
+                        <div class="">
+                                <h3>SECURE PAYMENT</h3>
+                                <p>Curabitur interdum, nisl at tincidunt.</p>
+                        </div>
+                </div>
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-evenly my-5 section">
+                        <i class="fa-solid fa-box rounded-circle"></i>
+                        <div>
+                                <h3>DELIVERED WITH CARE</h3>
+                                <p>Donec sit amet neque id nisl.</p>
+                        </div>
+                </div>
+                <div class="col-12 col-md-4 d-flex align-items-center justify-content-evenly my-5 section s1">
+                        <i class="fa-solid fa-hand-holding-heart rounded-circle"></i>
+                        <div>
+                                <h3>EXCELLENT SERVICE</h3>
+                                <p>Amet neque id nisl ullamcorper.</p>
+                        </div>
+                </div>
+        </div>
+</div>
+<div class="container-fluid px-5 reviews pt-4 mb-5">
+        <h1 class="text-center mb-5">What Our Customers Say</h1>
+        <div class="row d-flex justify-content-between px-4 r">
+                <div class="col-12 col-lg-4 d-flex flex-column align-items-center justify-content-center">
+                        <p class="text-center px-4 comment">Sed odio donec curabitur auctor amet tincidunt non odio enim felis tincidunt amet morbi egestas hendrerit.</p>
+                        <i class="fa-solid fa-user rounded-circle"></i>
+                        <p class="user">JENNIFER LEWIS</p>
+                </div>
+                <div class="col-12 col-lg-4 d-flex flex-column align-items-center justify-content-center">
+                        <p class="text-center px-4 comment">Sed odio donec curabitur auctor amet tincidunt non odio enim felis tincidunt amet morbi egestas hendrerit.</p>
+                        <i class="fa-solid fa-user rounded-circle"></i>
+                        <p class="user">ALICIA HEART</p>
+                </div>
+                <div class="col-12 col-lg-4 d-flex flex-column align-items-center justify-content-center">
+                        <p class="text-center px-4 comment">Sed odio donec curabitur auctor amet tincidunt non odio enim felis tincidunt amet morbi egestas hendrerit.</p>
+                        <i class="fa-solid fa-user rounded-circle"></i>
+                        <p class="user">JUAN CARLOS</p>
+                </div>
+        </div>
+</div>
+<footer class="footer text-center pt-5">
+        <h4 class="text-white mb-3">Subscribe to our newsletter</h4>
+        <div>
+                <input type="email" class="w-25 subscribe" placeholder="Your email address...">
+                <input type="submit" class="b" value="Subscribe">
+        </div>
+        <hr>
+        <div class="pb-3">
+                <p class="text-white">&#169; 2024 Plant Shop. Powered by Plant Shop.</p>
+        </div>
+</footer>

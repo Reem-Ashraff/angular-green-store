@@ -1,0 +1,92 @@
+.cover{
+        background-image: url(../../assets/login.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        filter: brightness(0.5);
+}
+.form{
+        height: fit-content;
+        width: 40%;
+        position: absolute;
+        top: 13.5%;
+        box-shadow: 0vmin 0vmin 1.7vmin rgb(20, 20, 20);
+}
+.form h1{
+        font-family:'Times New Roman', Times, serif;
+        font-weight: 800;
+        font-size: 7.5vmin;
+        font-style: italic;
+        color: rgb(61, 149, 61);
+}
+.form .l{
+        color: black;
+        font-size: 2.7vmin;
+        letter-spacing: 0.2vmin;
+        font-weight: 400;
+}
+.form .i{
+        border: 0.4vmin solid rgb(61, 149, 61);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        padding-left: 2vmin;
+        font-size: 2.5vmin;
+        padding-top: 0.5vmin;
+        padding-bottom: 0.5vmin;
+}
+.message{
+        color: rgb(210, 8, 8);
+}
+.message2{
+        color: rgb(61, 149, 61);
+}
+.form .button{
+        border-color: transparent;
+        color: white;
+        background-color: rgb(61, 149, 61);
+        font-size: 2.6vmin;
+        padding: 1vmin 3vmin;
+        width: fit-content;
+        margin: auto;
+        transition: 0.3s;
+}
+.check{
+        font-size: 2.5vmin;
+        font-weight: 400;
+}
+.link{
+        font-size: 2.5vmin;
+        font-weight: 400;
+        text-decoration: none;
+        color: rgb(61, 149, 61);
+}
+.form p{
+        font-size: 2.5vmin;
+}
+.form p a{
+        color: rgb(61, 149, 61);
+}
+.d{
+        color: rgb(210, 8, 8);
+        font-size: 2.3vmin;
+}
+@media(max-width:500px){
+        .form{
+                width: 100%;
+                height: 100vh;
+                top: 0vmin;
+                border-radius: 0vmin !important;
+        }
+}
+@media(min-width:500px){
+        .form{
+                width: 65%;
+        }
+}
+@media(min-width:900px){
+        .form{
+                width: 40%;
+        }
+}

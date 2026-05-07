@@ -1,0 +1,204 @@
+.header{
+        background-color: white !important;
+        position: sticky;
+        top: 0vmin;
+        padding-top: 3vmin;
+        padding-bottom: 3vmin;
+        width: 100%;
+        box-shadow: 0vmin 0vmin 1vmin gray;
+        z-index: 1000;
+}
+.header li{
+        padding-left: 2.2vmin;
+        transition: 0.3s;
+}
+.header li:hover a{
+        color: rgb(61, 149, 61) !important;
+}
+.header li:hover sup{
+        background-color: rgb(61, 149, 61) !important;
+        color: white;
+}
+.header sup{
+        background-color: black;
+        color: white;
+        padding: 0.05vmin 0.75vmin;
+        padding-bottom: 0.2vmin !important;
+        font-size: 1.7vmin;
+        transition: 0.3s;
+}
+.h-title{
+        font-family:'Times New Roman', Times, serif;
+        font-size: 4.5vmin;
+        letter-spacing: 0.2vmin;
+}
+.plants{
+        width: 90%;
+}
+.item h5{
+        font-family:'Times New Roman', Times, serif;
+        font-size: 3.5vmin;
+        color: black;
+}
+.item .p0{
+        color: gray;
+        font-size: 2.7vmin;
+}
+.item .p2{
+        font-size: 2.5vmin;
+        font-weight: 700;
+        color: rgb(52, 50, 50);
+}
+.item .i0{
+        background-color: rgb(61, 149, 61) !important;
+        color: white;
+        border-color: transparent !important;
+        padding: 1.2vmin 1.6vmin;
+        transition: 0.3s;
+        position: absolute;
+        top: 2vmin;
+        right: 2vmin;
+}
+.item .i0 i{
+        font-size: 2.5vmin;
+}
+.item .i0:hover{
+        background-color: rgb(52, 50, 50) !important;
+}
+.stars i{
+        font-size: 2.5vmin;
+}
+.product{
+        position: relative;
+}
+.product img{
+        height: 40vh;
+}
+.plants select{
+        font-size: 2.6vmin;
+        padding: 1vmin 0vmin;
+        padding-left: 1.5vmin !important;
+        border-color: transparent;
+        transition: 0.3s;
+}
+.plants select:hover{
+        border-color: black;
+}
+.plants select option{
+        font-size: 2.6vmin;
+        padding: 2vmin 1.5vmin;
+}
+.footer{
+        background-color: rgb(14, 36, 14);
+        margin-bottom: 0vmin;
+}
+.footer hr{
+        width: 100%;
+}
+.footer h4{
+        font-family:'Times New Roman', Times, serif;
+        font-size: 3.7vmin;
+}
+.subscribe{
+        padding: 1vmin 2vmin;
+        font-size: 2.7vmin;
+        margin-right: 3vmin;
+}
+.footer .b{
+        border-color: transparent;
+        color: white;
+        background-color: rgb(61, 149, 61);
+        font-size: 2.6vmin;
+        padding: 1vmin 3vmin;
+        transition: 0.3s;
+}
+.footer p{
+        font-size: 2.5vmin;
+}
+.cart0{
+        background-color: white;
+        position: fixed;
+        top: 0vmin;
+        right: 0vmin;
+        width: 40%;
+        z-index: 1500;
+        height: 100vh;
+}
+.cart0 button{
+        width: 90%;
+        border-color: transparent;
+        position: absolute;
+        bottom: 0vmin;
+        color: white;
+        background-color: rgb(61, 149, 61);
+        font-size: 2.6vmin;
+        padding: 1vmin 3vmin;
+        transition: 0.3s;
+}
+
+.cart0 button:hover{
+        background-color: rgb(63, 62, 62);
+}
+.cart0 h3{
+        font-size: 3.5vmin;
+        color: rgb(63, 62, 62);
+}
+.cart0 .c{
+        font-size: 3.5vmin;
+        color: rgb(52, 50, 50);
+}
+.cart-img{
+        width: 20%;
+        margin-right: 3vmin;
+}
+.item-name{
+        font-size: 2.8vmin;
+        color: rgb(50, 48, 48);
+}
+.item-price{
+        font-size: 2.5vmin;
+        color: rgb(110, 108, 108);
+        font-weight: 500;
+}
+.close{
+        font-size: 2.5vmin;
+        color: rgb(50, 48, 48);
+        border: 0.25vmin solid rgb(21, 21, 21);
+        padding: 1vmin 1.5vmin;
+        transition: 0.3s;
+}
+.close:hover{
+        color: white;
+        background-color: rgb(50, 48, 48);
+        border-color: rgb(50, 48, 48);
+}
+
+.footer .b:hover{
+        background-color: rgb(52, 50, 50) !important;
+}
+
+@media(min-width:991px){
+        .header li:hover{
+                transform: translateY(-0.5vmin);
+        }
+}
+@media(max-width:992px){
+        .header li:hover{
+                transform: translatex(0.5vmin);
+        }
+}
+@media(max-width:360px){
+        .item{
+                padding-left: 4vmin !important;
+                padding-right: 4vmin !important;
+        }
+        .pp{
+                margin-left: 4vmin !important;
+                margin-right: 4vmin !important;
+        }
+}
+@media(max-width:850px){
+        .cart0{
+                width: 100%;
+        }
+}

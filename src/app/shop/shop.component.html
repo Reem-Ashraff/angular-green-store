@@ -1,0 +1,104 @@
+<div class="bg-light page">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary header">
+                <div class="container-fluid px-4 d-flex">
+                        <a class="navbar-brand text-black h-title" href="#">Greenstore</a>
+                        <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                        <li class="nav-item">
+                                                <a class="nav-link active text-black" aria-current="page" href="/home">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link text-black" href="/about">About</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link text-black" href="/plants">Plants</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link text-black" (click)="logout()" href="{{href}}">{{log}}</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link text-black" (click)="cartshown()" id="cart">
+                                                        <i class="fa-solid fa-cart-shopping"></i>
+                                                        <sup class="rounded-circle">{{num}}</sup>
+                                                </a>
+                                        </li>
+                                </ul>
+                        </div>
+                        <div class="d-flex">
+                                <div class="d-flex align-items-center">
+                                        <i class="fa-solid fa-user"></i>
+                                        <div class="mx-1">{{username}}</div>
+                                </div>
+                        </div>
+                </div>
+        </nav>
+        <div *ngIf="isShown" class="cart0">
+                <div class="d-flex justify-content-between mt-4 mx-4">
+                        <h3>Shopping Cart</h3>
+                        <i class="fa-solid fa-xmark c" (click)="closecart()"></i>
+                </div>
+                <hr class="w-100">
+                <div class="items-box">
+                        <div *ngFor="let i of cart_elements" class="d-flex align-items-center justify-content-between mx-5 mb-3">
+                                <div class="d-flex align-items-center">
+                                        <img [src]="i.item_image" class="cart-img">
+                                        <div>
+                                                <h4 class="item-name">{{i.item_name}}</h4>
+                                                <p class="item-price">{{i.item_price}}</p>
+                                        </div>
+                                </div>
+                                <i class="fa-solid fa-xmark close rounded-circle" (click)="deleteItem(i.cart_id)"></i>
+                        </div>
+                </div>
+                <div *ngIf="Shown" class="w-100 h-75 d-flex justify-content-center align-items-center">
+                        <p>No products in the cart.</p>
+                </div>
+                <div class="d-flex justify-content-center b">
+                        <button *ngIf="checkShow" class="mb-3" (click)="toOrder()">Checkout</button>
+                        <button *ngIf="shopShow"  class="mb-3" (click)="toplants()">Continue Shopping</button>
+                </div>
+        </div>
+        <div class="d-flex justify-content-center">
+                <div class="bg-white my-5 pb-4 plants">
+                        <select class="mx-5 mt-5 pp" (click)="get_value($event)">
+                                <option value="" selected>Categories</option>
+                                <option *ngFor="let c of categories" [value]="c.category_name">{{c.category_name}}</option>
+                        </select>
+                        <div class="d-flex justify-content-between flex-wrap my-5 px-5 item">
+                                <div *ngFor="let item of items; let i = index" class="col-12 col-sm-5 col-lg-3 card mb-4 product mx-1">
+                                        <img [src]="item.p_image" class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                                <div class="stars mb-1">
+                                                        <i class="fa-regular fa-star"></i>
+                                                        <i class="fa-regular fa-star"></i>
+                                                        <i class="fa-regular fa-star"></i>
+                                                        <i class="fa-regular fa-star"></i>
+                                                        <i class="fa-regular fa-star"></i>
+                                                </div>
+                                                <h5 class="card-title">{{item.p_name}}</h5>
+                                                <div style="display: none;" [id]="i">{{i}}</div>
+                                                <p class="card-text mb-1 p0">{{item.category_id}}</p>
+                                                <p class="card-text p2">${{item.p_price}}</p>
+                                                <div class="rounded-circle i0" (click)="additem(item.p_name,item.p_price,item.p_image)">
+                                                        <i class="fa-solid fa-cart-shopping"></i>
+                                                </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+</div>
+<footer class="footer text-center pt-5">
+        <h4 class="text-white mb-3">Subscribe to our newsletter</h4>
+        <div>
+                <input type="email" class="w-25 subscribe" placeholder="Your email address...">
+                <input type="submit" class="b" value="Subscribe">
+        </div>
+        <hr>
+        <div class="pb-3">
+                <p class="text-white">&#169; 2024 Plant Shop. Powered by Plant Shop.</p>
+        </div>
+</footer>

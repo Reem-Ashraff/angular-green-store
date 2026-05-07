@@ -1,0 +1,103 @@
+<div class="cover"></div>
+<div class="d-flex justify-content-center align-items-center">
+        <div *ngIf="shown" class="bg-light form d-flex flex-column align-items-center justify-content-center rounded py-4">
+                <form [formGroup]="form" class="form-box d-flex flex-column w-75 mt-3">
+                        <div class="mb-4">
+                                <label class="l mb-2" >Update what?</label><br>
+                                <select class="w-100 bg-light rounded i" formControlName="updatewhat">
+                                        <option value="p_name">Plant name</option>
+                                        <option value="p_category">Plant category</option>
+                                        <option value="p_price">Plant price</option>
+                                        <option value="p_image">Plant image</option>
+                                </select>
+                        </div>
+                        <input type="submit" value="Next" [disabled]="form.invalid" (click)="submit()" class="mb-3 button">
+                </form>
+        </div>
+
+
+        <div *ngIf="nameShown" class="bg-light form d-flex flex-column align-items-center justify-content-center rounded py-4">
+                <div>
+                        <div class="message">{{message}}</div>
+                        <div class="message2">{{message2}}</div>
+                </div>
+                <form [formGroup]="form1" class="form-box d-flex flex-column w-75 mt-4">
+                        <div class="mb-4">
+                                <label class="l mb-2" >Plant</label><br>
+                                <select class="w-100 bg-light rounded i" formControlName="name">
+                                        <option *ngFor="let c of items" [value]="c.p_name">{{c.p_name}}</option>
+                                </select>
+                        </div>
+                        <div class="mb-4">
+                                <label class="l mb-2" >Updated name</label><br>
+                                <input type="text" formControlName="updated_name" class="w-100 bg-light rounded i">
+                        </div>
+                        <input type="submit" value="Update Plant" [disabled]="form1.invalid" (click)="submit1()" class="mb-3 button">
+                </form>
+        </div>
+
+
+        <div *ngIf="categoryShown" class="bg-light form d-flex flex-column align-items-center justify-content-center rounded py-4">
+                <div>
+                        <div class="message">{{message}}</div>
+                        <div class="message2">{{message2}}</div>
+                </div>
+                <form [formGroup]="form2" class="form-box d-flex flex-column w-75 mt-4">
+                        <div class="mb-4">
+                                <label class="l mb-2" >Category</label><br>
+                                <select class="w-100 bg-light rounded i" formControlName="name">
+                                        <option *ngFor="let c of items" [value]="c.p_name">{{c.p_name}}</option>
+                                </select>
+                        </div>
+                        <div class="mb-4">
+                                <label class="l mb-2" >Updated category</label><br>
+                                <select class="w-100 bg-light rounded i" formControlName="updated_category">
+                                        <option *ngFor="let c of categories" [value]="c.category_name">{{c.category_name}}</option>
+                                </select>
+                        </div>
+                        <input type="submit" value="Update Plant" [disabled]="form2.invalid" (click)="submit2()" class="mb-3 button">
+                </form>
+        </div>
+
+
+        <div *ngIf="priceShown" class="bg-light form d-flex flex-column align-items-center justify-content-center rounded py-4">
+                <div>
+                        <div class="message">{{message}}</div>
+                        <div class="message2">{{message2}}</div>
+                </div>
+                <form [formGroup]="form3" class="form-box d-flex flex-column w-75 mt-4">
+                        <div class="mb-4">
+                                <label class="l mb-2" >Plant</label><br>
+                                <select class="w-100 bg-light rounded i" formControlName="name">
+                                        <option *ngFor="let c of items" [value]="c.p_name">{{c.p_name}}</option>
+                                </select>
+                        </div>
+                        <div class="mb-4">
+                                <label class="l mb-2" >Updated price</label><br>
+                                <input type="text" formControlName="updated_price" class="w-100 bg-light rounded i">
+                        </div>
+                        <input type="submit" value="Update Plant" [disabled]="form3.invalid" (click)="submit3()" class="mb-3 button">
+                </form>
+        </div>
+
+
+        <div *ngIf="imgShown" class="bg-light form d-flex flex-column align-items-center justify-content-center rounded py-4">
+                <div>
+                        <div class="message">{{message}}</div>
+                        <div class="message2">{{message2}}</div>
+                </div>
+                <form [formGroup]="form4" class="form-box d-flex flex-column w-75 mt-4">
+                        <div class="mb-4">
+                                <label class="l mb-2" >Plant</label><br>
+                                <select class="w-100 bg-light rounded i" formControlName="name">
+                                        <option *ngFor="let c of items" [value]="c.p_name">{{c.p_name}}</option>
+                                </select>
+                        </div>
+                        <div class="mb-4">
+                                <label class="l mb-2" >Updated image</label><br>
+                                <input type="file" formControlName="updated_image" (change)="onFileChange($event)" class="form-control w-100 bg-light rounded i">
+                        </div>
+                        <input type="submit" value="Update Plant" [disabled]="form4.invalid" (click)="submit4()" class="mb-3 button">
+                </form>
+        </div>
+</div>

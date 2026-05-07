@@ -1,0 +1,156 @@
+<div class="bg-light page">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary header">
+                <div class="container-fluid px-4 d-flex">
+                        <a class="navbar-brand text-black h-title" href="#">Greenstore</a>
+                        <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                        <li class="nav-item">
+                                                <a class="nav-link active text-black" aria-current="page" href="/home">Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link text-black" href="/about">About</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link text-black" href="/plants">Plants</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link text-black" (click)="logout()" href="{{href}}">{{log}}</a>
+                                        </li>
+                                        <li class="nav-item">
+                                                <a class="nav-link text-black" (click)="cartshown()" id="cart">
+                                                        <i class="fa-solid fa-cart-shopping"></i>
+                                                        <sup class="rounded-circle">{{num}}</sup>
+                                                </a>
+                                        </li>
+                                </ul>
+                        </div>
+                        <div class="d-flex">
+                                <div class="d-flex align-items-center">
+                                        <i class="fa-solid fa-user"></i>
+                                        <div class="mx-1">{{username}}</div>
+                                </div>
+                        </div>
+                </div>
+        </nav>
+        <div *ngIf="isShown" class="cart0">
+                <div class="d-flex justify-content-between mt-4 mx-4">
+                        <h3>Shopping Cart</h3>
+                        <i class="fa-solid fa-xmark c" (click)="closecart()"></i>
+                </div>
+                <hr class="w-100">
+                <div class="items-box">
+                        <div *ngFor="let i of cart_elements" class="d-flex align-items-center justify-content-between mx-5 mb-3">
+                                <div class="d-flex align-items-center">
+                                        <img [src]="i.item_image" class="cart-img">
+                                        <div>
+                                                <h4 class="item-name">{{i.item_name}}</h4>
+                                                <p class="item-price">{{i.item_price}}</p>
+                                        </div>
+                                </div>
+                                <i class="fa-solid fa-xmark close rounded-circle" (click)="deleteItem(i.cart_id)"></i>
+                        </div>
+                </div>
+                <div *ngIf="Shown" class="w-100 h-75 d-flex justify-content-center align-items-center">
+                        <p>No products in the cart.</p>
+                </div>
+                <div class="d-flex justify-content-center b">
+                        <button *ngIf="checkShow" class="mb-3" (click)="toplants()">Checkout</button>
+                        <button *ngIf="shopShow"  class="mb-3" (click)="toplants()">Continue Shopping</button>
+                </div>
+        </div>
+        <div class="d-flex justify-content-center">
+                <div class="bg-white my-5 pb-4 plants">
+                        <div class="mt-4 text-center">
+                                <div class="message2">{{msg}}</div>
+                        </div>
+                        <h1 class="mx-5 mt-5 mb-3">Checkout</h1>
+                        <hr>
+                        <form [formGroup]="form" class="row mx-5 info d-flex justify-content-between">
+                                <div class="col-7">
+                                        <div class="row">
+                                                <div class="col-12 mt-5 mb-4">
+                                                        <h2>Billing details</h2>
+                                                        <hr class="w-100">
+                                                </div>
+                                                <div class="col-6 mb-3">
+                                                        <label>First name</label>
+                                                        <input class="col-12" type="text" formControlName="firstname">
+                                                </div>
+                                                <div class="col-6 mb-3">
+                                                        <label>Last name</label>
+                                                        <input class="col-12" type="text" formControlName="lastname">
+                                                </div>
+                                                <div class="mb-3">
+                                                        <label class="col-12">Country</label>
+                                                        <input class="col-12" type="text" formControlName="country">
+                                                </div>
+                                                <div class="mb-3">
+                                                        <label class="col-12">Street address</label>
+                                                        <input class="col-12" type="text" formControlName="address">
+                                                </div>
+                                                <div class="mb-3">
+                                                        <label class="col-12">City/Town</label>
+                                                        <input class="col-12" type="text" formControlName="city">
+                                                </div>
+                                                <div class="mb-3">
+                                                        <label class="col-12">Phone</label>
+                                                        <input class="col-12" type="text" formControlName="phone">
+                                                </div>
+                                                <div class="mb-4">
+                                                        <label class="col-12">Email</label>
+                                                        <input class="col-12" type="email" formControlName="email">
+                                                </div>
+                                                <div class="col-12 my-4">
+                                                        <h2>Additional information</h2>
+                                                        <hr class="w-100">
+                                                </div>
+                                                <div class="mb-5">
+                                                        <label class="col-12">Notes</label>
+                                                        <textarea class="col-12" formControlName="notes"></textarea>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="col-4 my-5 mx-4 px-4 py-4 productsinfo">
+                                        <h2>Your Order</h2>
+                                        <div class="d-flex justify-content-between mb-1 mt-4 title">
+                                                <h4>Products</h4>
+                                                <h4>Subtotal</h4>
+                                        </div>
+                                        <hr class="mb-3">
+                                        <div *ngFor="let i of cart_elements">
+                                                <div class="d-flex justify-content-between mb-1 item">
+                                                        <h5>{{i.item_name}}</h5>
+                                                        <h5>${{i.item_price}}</h5>
+                                                </div>
+                                                <hr class="mb-3">
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-1 item">
+                                                <h5>Subtotal</h5>
+                                                <h5>${{total}}</h5>
+                                        </div>
+                                        <hr class="mb-3">
+                                        <div class="d-flex justify-content-between mb-1 item">
+                                                <h5>Total</h5>
+                                                <h5>${{total}}</h5>
+                                        </div>
+                                        <hr class="mb-3">
+                                        <input type="submit" value="Order" class="submit" [disabled]="form.invalid" (click)="submit()">
+                                </div>
+                        </form>
+                </div>
+        </div>
+</div>
+<footer class="footer text-center pt-5">
+        <h4 class="text-white mb-3">Subscribe to our newsletter</h4>
+        <div>
+                <input type="email" class="w-25 subscribe" placeholder="Your email address...">
+                <input type="submit" class="b" value="Subscribe">
+        </div>
+        <hr>
+        <div class="pb-3">
+                <p class="text-white">&#169; 2024 Plant Shop. Powered by Plant Shop.</p>
+        </div>
+</footer>

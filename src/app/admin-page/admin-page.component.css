@@ -1,0 +1,68 @@
+.header{
+        background-color: white !important;
+        position: sticky;
+        top: 0vmin;
+        padding-top: 3vmin;
+        padding-bottom: 3vmin;
+        width: 100%;
+        box-shadow: 0vmin 0vmin 1vmin gray;
+        z-index: 1000;
+}
+.header li{
+        padding-left: 2.2vmin;
+        transition: 0.3s;
+}
+.header li:hover a{
+        color: rgb(61, 149, 61) !important;
+}
+.h-title{
+        font-family:'Times New Roman', Times, serif;
+        font-size: 4.5vmin;
+        letter-spacing: 0.2vmin;
+}
+.cards{
+        /*border-bottom: 0.3vmin solid rgb(61, 149, 61);*/
+        text-decoration: none;
+        box-shadow: 0vmin 0vmin 0.7vmin rgb(44, 44, 44);
+        transition: 0.3s;
+}
+.cards:hover{
+        box-shadow: 0vmin 0vmin 1vmin rgb(73, 73, 73);
+        transform: scale(1.1);
+}
+.cards i{
+        font-size: 6vmin;
+        color: rgb(72, 69, 69);
+}
+.cards p{
+        color: rgb(50, 49, 49);
+        font-size: 2.8vmin;
+        font-weight: 400;
+}
+
+@media(min-width:991px){
+        .header li:hover{
+                transform: translateY(-0.5vmin);
+        }
+}
+@media(max-width:992px){
+        .header li:hover{
+                transform: translatex(0.5vmin);
+        }
+}
+@media(max-width:766px){
+        .cards{
+                margin-left: 2vmin !important;
+                margin-right: 2vmin !important;
+        }
+        .c{
+                margin-left: 0vmin !important;
+                margin-right: 0vmin !important;
+                padding-left: 2vmin !important;
+                padding-right: 2vmin !important;
+        }
+
+}
+.page{
+        height: 100%;
+}

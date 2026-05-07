@@ -1,0 +1,380 @@
+.home{
+        background-image: url(../../assets/background.jpg);
+        height: 95vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.5);
+        position: relative;
+}
+.header{
+        background-color: transparent !important;
+        position: absolute;
+        top: 0vmin;
+        padding-top: 3vmin;
+        padding-bottom: 3vmin;
+        width: 100%;
+}
+.header li{
+        padding-left: 2.2vmin;
+        transition: 0.3s;
+}
+.header li:hover a{
+        color: rgb(35, 35, 35) !important;
+}
+.h-title{
+        font-family:'Times New Roman', Times, serif;
+        font-size: 4.5vmin;
+        letter-spacing: 0.2vmin;
+}
+.background-content{
+        position: absolute;
+        top: 26.8%;
+        text-align: center;
+        /*flex-direction: column;*/
+        /*left: 23.5%;*/
+}
+.background-content p{
+        letter-spacing: 0.4vmin;
+        font-size: 2.7vmin;
+        font-weight: 400;
+        font-family:'Times New Roman', Times, serif;
+        margin-bottom: 5vmin;
+}
+.background-content h1{
+        font-size: 11vmin;
+        line-height: 15vmin;
+        font-family:'Times New Roman', Times, serif;
+        margin-bottom: 6vmin;
+}
+.background-content button{
+        background-color: white;
+        color: black;
+        border-color: transparent;
+        font-size: 2.6vmin;
+        padding: 1vmin 2.5vmin;
+        transition: 0.3s;
+}
+.background-content button:hover{
+        color: white;
+        background-color: rgb(32, 33, 32);
+}
+.head h1{
+        font-family:'Times New Roman', Times, serif;
+        font-size: 6vmin;
+        font-weight: 500;
+        color: black;
+}
+.head button{
+        border-color: transparent;
+        color: white;
+        background-color: rgb(61, 149, 61);
+        font-size: 2.6vmin;
+        padding: 1vmin 3vmin;
+        transition: 0.3s;
+}
+.head button:hover{
+        background-color: rgb(52, 50, 50) !important;
+}
+.item h5{
+        font-family:'Times New Roman', Times, serif;
+        font-size: 3.5vmin;
+        color: black;
+}
+.item .p0{
+        color: gray;
+        font-size: 2.7vmin;
+}
+.item .p2{
+        font-size: 2.5vmin;
+        font-weight: 700;
+        color: rgb(52, 50, 50);
+}
+.item .i0{
+        background-color: rgb(61, 149, 61) !important;
+        color: white;
+        border-color: transparent !important;
+        padding: 1.2vmin 1.6vmin;
+        transition: 0.3s;
+        position: absolute;
+        top: 2vmin;
+        right: 2vmin;
+}
+.item .i0 i{
+        font-size: 2.5vmin;
+}
+.item .i0:hover{
+        background-color: rgb(52, 50, 50) !important;
+}
+.header li:hover sup{
+        background-color: rgb(52, 50, 50) !important;
+        color: white;
+}
+.header sup{
+        color: rgb(52, 50, 50);
+        background-color: white;
+        padding: 0.05vmin 0.75vmin;
+        padding-bottom: 0.2vmin !important;
+        font-size: 1.7vmin;
+        transition: 0.3s;
+}
+.item a{
+        background-color: rgb(61, 149, 61) !important;
+        color: white;
+        border-color: transparent !important;
+        padding: 1.2vmin 1.6vmin;
+        transition: 0.3s;
+        position: absolute;
+        top: 2vmin;
+        right: 2vmin;
+}
+.item a i{
+        font-size: 2.5vmin;
+}
+.item a:hover{
+        background-color: rgb(52, 50, 50) !important;
+}
+.stars i{
+        font-size: 2.5vmin;
+}
+.product{
+        position: relative;
+}
+.product img{
+        height: 40vh;
+}
+.story .title{
+        letter-spacing: 0.4vmin;
+        font-size: 2.7vmin;
+        font-weight: 400;
+        font-family:'Times New Roman', Times, serif;
+        color: black;
+}
+.story h1{
+        font-family:'Times New Roman', Times, serif;
+        color: black;
+        font-size: 7vmin;
+}
+.story .paragraph{
+        color: rgb(60, 58, 58);
+        font-size: 2.7vmin;
+}
+.story button{
+        border-color: transparent;
+        color: white;
+        background-color: rgb(61, 149, 61);
+        font-size: 2.6vmin;
+        padding: 1vmin 3vmin;
+        transition: 0.3s;
+        width: fit-content !important;
+}
+.story button:hover{
+        background-color: rgb(52, 50, 50) !important;
+}
+.reviews h1{
+        font-family:'Times New Roman', Times, serif;
+        font-size: 6vmin;
+        font-weight: 500;
+        color: black;
+}
+.reviews hr{
+        width: 10%;
+}
+.reviews .comment{
+        font-size: 2.7vmin;
+        font-weight: 400;
+        color: black;
+}
+.reviews i{
+        color: white;
+        background-color: rgb(208, 208, 208);
+        font-size: 4.8vmin;
+        padding: 1.2vmin 1.5vmin;
+        margin-bottom: 1.5vmin;
+}
+.reviews .user{
+        font-family:'Times New Roman', Times, serif;
+        font-size: 2.2vmin;
+        letter-spacing: 0.2vmin;
+        color: black;
+        font-weight: 400;
+}
+.block{
+        background-color: rgb(223, 223, 223);
+}
+.section{
+        border-right: 0.2vmin solid rgb(159, 157, 157);
+        border-width: 50%;
+}
+.s1{
+        border: none;
+}
+.section i{
+        background-color: rgb(61, 149, 61);
+        font-size: 3vmin;
+        color: white;
+        padding: 2.2vmin 2.5vmin;
+}
+.section h3{
+        font-family:'Times New Roman', Times, serif;
+        font-size: 3vmin;
+        color: black;
+        letter-spacing: 0.2vmin;
+}
+.section p{
+        font-size: 2.4vmin;
+        color: rgb(60, 58, 58);
+        font-weight: 400;
+        line-height: 1vmin;
+}
+.footer{
+        background-color: rgb(14, 36, 14);
+        margin-bottom: 0vmin;
+}
+.footer hr{
+        width: 100%;
+}
+.footer h4{
+        font-family:'Times New Roman', Times, serif;
+        font-size: 3.7vmin;
+}
+.subscribe{
+        padding: 1vmin 2vmin;
+        font-size: 2.7vmin;
+        margin-right: 3vmin;
+}
+.footer .b{
+        border-color: transparent;
+        color: white;
+        background-color: rgb(61, 149, 61);
+        font-size: 2.6vmin;
+        padding: 1vmin 3vmin;
+        transition: 0.3s;
+}
+.footer .b:hover{
+        background-color: rgb(52, 50, 50) !important;
+}
+.footer p{
+        font-size: 2.5vmin;
+}
+.cart0{
+        background-color: white;
+        /*position: absolute;*/
+        top: 0vmin;
+        right: 0vmin;
+        width: 40%;
+        z-index: 1500;
+        height: 100vh;
+        position: fixed;
+
+}
+.cart0 button{
+        width: 90%;
+        border-color: transparent;
+        position: absolute;
+        bottom: 0vmin;
+        color: white;
+        background-color: rgb(61, 149, 61);
+        font-size: 2.6vmin;
+        padding: 1vmin 3vmin;
+        transition: 0.3s;
+}
+
+.cart0 button:hover{
+        background-color: rgb(63, 62, 62);
+}
+.cart0 h3{
+        font-size: 3.5vmin;
+        color: rgb(63, 62, 62);
+}
+.cart0 .c{
+        font-size: 3.5vmin;
+        color: rgb(52, 50, 50);
+}
+.cart-img{
+        width: 20%;
+        margin-right: 3vmin;
+}
+.item-name{
+        font-size: 2.8vmin;
+        color: rgb(50, 48, 48);
+}
+.item-price{
+        font-size: 2.5vmin;
+        color: rgb(110, 108, 108);
+        font-weight: 500;
+}
+.close{
+        font-size: 2.5vmin;
+        color: rgb(50, 48, 48);
+        border: 0.25vmin solid rgb(21, 21, 21);
+        padding: 1vmin 1.5vmin;
+        transition: 0.3s;
+}
+.close:hover{
+        color: white;
+        background-color: rgb(50, 48, 48);
+        border-color: rgb(50, 48, 48);
+}
+
+
+
+@media(min-width:991px){
+        .header li:hover{
+                transform: translateY(-0.5vmin);
+        }
+}
+@media(max-width:992px){
+        .header li:hover{
+                transform: translatex(0.5vmin);
+        }
+}
+@media(max-width:768px){
+        .logo{
+                display: none;
+        }
+        .item{
+                padding-left: 2vmin !important;
+                padding-right: 2vmin !important;
+        }
+        .head{
+                padding-left: 0vmin !important;
+                padding-right: 0vmin !important;
+        }
+        .r{
+                padding-left: 0vmin !important;
+                padding-right: 0vmin !important;
+        }
+        .reviews{
+                padding-left: 0vmin !important;
+                padding-right: 0vmin !important;
+        }
+        .reviews .comment{
+                font-size: 4vmin;
+        }
+        .reviews i{
+                font-size: 5vmin;
+        }
+        .reviews .user{
+                font-size: 3vmin;
+        }
+        .section{
+                border-right: none;
+        }
+        .block{
+                padding-left: 0vmin !important;
+                padding-right: 0vmin !important;
+        }
+        .section h3{
+                font-size: 4vmin;
+        }
+        .section p{
+                font-size: 3.2vmin;
+        }
+        .section i{
+                font-size: 4vmin;
+        }
+        .background-content h1{
+                font-size: 9vmin;
+        }
+}

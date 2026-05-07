@@ -1,0 +1,16 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary header">
+        <div class="container-fluid px-4 d-flex">
+                <a class="navbar-brand text-black h-title" href="#">Greenstore</a>
+        </div>
+</nav>
+<h1 class="my-5 text-center">Our Categories</h1>
+<div class="container-fluid my-5">
+        <div class="row d-flex justify-content-center">
+                <div *ngFor="let c of categories" class="col-10 col-sm-7 mb-4 flex-nowrap py-4 d-flex justify-content-around align-items-center category">
+                        <h4>{{c.category_name}}</h4>
+                        <a href="categoryItems/{{c.c_id}}" class="px-2 py-1">Items</a>
+                        <a href="/updateCategory" class="px-2 py-1 a"><i class="fa-regular fa-pen-to-square a1"></i></a>
+                        <i class="fa-regular fa-circle-xmark" (click)="delete(c.c_id)"></i>
+                </div>
+        </div>
+</div>
