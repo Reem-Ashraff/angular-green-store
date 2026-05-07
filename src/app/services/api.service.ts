@@ -12,7 +12,7 @@ export class ApiService {
 
   user_id:any;
   userdata:any = null;
-  baseURL0 = "https://greenstore.infinityfreeapp.com/";
+  baseURL0 = "https://greenstore.infinityfreeapp.com";
   baseURL = "https://greenstore.infinityfreeapp.com/get_plants.php";
   categoriesURL = "https://greenstore.infinityfreeapp.com/get_categories.php";
   insertURL="https://greenstore.infinityfreeapp.com/signup_api.php";
@@ -62,7 +62,7 @@ export class ApiService {
   login_user(user:any){
     const body = JSON.stringify(user);
     //return this.http.post<[]>(this.loginURL,body);
-    return this.http.post<[]>(`${this.baseURL0}login.php`,body);
+    return this.http.post<[]>(`${this.baseURL0}/login.php`,body);
   }
   get_user(id:any){
     const body = JSON.stringify(id);
