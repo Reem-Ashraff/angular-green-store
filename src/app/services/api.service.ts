@@ -15,10 +15,10 @@ export class ApiService {
   baseURL0 = "https://greenstore.infinityfreeapp.com/api";
   baseURL = "https://greenstore.infinityfreeapp.com/api/get_plants.php";
   categoriesURL = "https://greenstore.infinityfreeapp.com/api/get_categories.php";
-  insertURL="https://greenstore.infinityfreeapp.com/api/signup_api.php";
+  insertURL="/proxy-api/signup_api.php";
   loginURL = "/proxy-api/login.php";
   insertCartURL = "https://greenstore.infinityfreeapp.com/api/insertToCart.php";
-  userURL = "https://greenstore-api.atwebpages.com/get_user.php";
+  userURL = "/proxy-api/get_user.php";
   getcartURL = "https://greenstore-api.thsite.top/get_cart.php";
   deleteitemURL = "https://greenstore.infinityfreeapp.com/api/delete_cartItem.php";
   deleteplantURL = "https://greenstore.infinityfreeapp.com/api/delete_plant.php";
