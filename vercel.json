@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/proxy-api/:path*",
-      "destination": "greenstore-api.atwebpages.com*"
+      "destination": "http://greenstore-api.atwebpages.com*"
     }
   ]
 }
