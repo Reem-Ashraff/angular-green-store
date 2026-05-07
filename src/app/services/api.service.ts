@@ -46,10 +46,12 @@ export class ApiService {
   }
 
   get_plants(){
-    return this.http.get<[]>(this.baseURL);
+    //return this.http.get<[]>(this.baseURL);
+    return this.http.get<[]>(`${this.baseURL0}/get_plants.php`);
   }
   get_categories(){
-    return this.http.get<[]>(this.categoriesURL);
+    //return this.http.get<[]>(this.categoriesURL);
+    return this.http.get<[]>(`${this.baseURL0}/get_categories.php`);
   }
   get_cartegory_plants(id:any){
     //const body = JSON.stringify(id);
