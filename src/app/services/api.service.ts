@@ -12,18 +12,18 @@ export class ApiService {
 
   user_id:any;
   userdata:any = null;
-  baseURL0 = "greenstore.infinityfreeapp.com";
+  baseURL0 = "https://greenstore.infinityfreeapp.com";
   baseURL = "https://greenstore.infinityfreeapp.com/get_plants.php";
   categoriesURL = "https://greenstore.infinityfreeapp.com/get_categories.php";
   insertURL="https://greenstore.infinityfreeapp.com/signup_api.php";
   loginURL = "https://greenstore.infinityfreeapp.com/login.php";
-  insertCartURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/insertToCart.php";
-  userURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/get_user.php";
-  getcartURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/get_cart.php";
-  deleteitemURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/delete_cartItem.php";
-  deleteplantURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/delete_plant.php";
-  addcategoryURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/add_category.php";
-  deletecategoryURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/delete_category.php";
+  insertCartURL = "https://greenstore.infinityfreeapp.com/insertToCart.php";
+  userURL = "https://greenstore.infinityfreeapp.com/get_user.php";
+  getcartURL = "https://greenstore.infinityfreeapp.com/get_cart.php";
+  deleteitemURL = "https://greenstore.infinityfreeapp.com/delete_cartItem.php";
+  deleteplantURL = "https://greenstore.infinityfreeapp.com/delete_plant.php";
+  addcategoryURL = "https://greenstore.infinityfreeapp.com/add_category.php";
+  deletecategoryURL = "https://greenstore.infinityfreeapp.com/delete_category.php";
   categoryItemsURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/get_categoryitems.php";
   addplantURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/add_plant.php";
   deletecategorybynameURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/delete_category_byname.php";
