@@ -12,11 +12,11 @@ export class ApiService {
 
   user_id:any;
   userdata:any = null;
-  baseURL0 = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com";
-  baseURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/get_plants.php";
-  categoriesURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/get_categories.php";
-  insertURL="https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/signup_api.php";
-  loginURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/login.php";
+  baseURL0 = "https://greenstore.infinityfreeapp.com";
+  baseURL = "https://greenstore.infinityfreeapp.com/get_plants.php";
+  categoriesURL = "https://greenstore.infinityfreeapp.com/get_categories.php";
+  insertURL="https://greenstore.infinityfreeapp.com/signup_api.php";
+  loginURL = "https://greenstore.infinityfreeapp.com/login.php";
   insertCartURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/insertToCart.php";
   userURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/get_user.php";
   getcartURL = "https://angular-green-store.vercel.app/greenstore.infinityfreeapp.com/get_cart.php";
