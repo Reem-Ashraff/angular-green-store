@@ -1,6 +1,6 @@
 {
   "/api": {
-    "target": "http://your-insecure-link.com",
+    "target": "greenstore-api.atwebpages.com",
     "secure": false,
     "changeOrigin": true
   }
