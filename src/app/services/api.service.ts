@@ -12,7 +12,7 @@ export class ApiService {
 
   user_id:any;
   userdata:any = null;
-  baseURL0 = "/api";
+  baseURL0 = "/greenstore-api.atwebpages.com";
   baseURL = "/api/get_plants.php";
   categoriesURL = "/api/get_categories.php";
   insertURL="/api/signup_api.php";
