@@ -3,7 +3,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://greenstore-api.thsite.top*"
+      "destination": "greenstore-api.atwebpages.com*"
     },
     {
       "source": "/(.*)",
