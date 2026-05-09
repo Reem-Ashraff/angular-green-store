@@ -56,19 +56,19 @@ export class ApiService {
     return this.http.get<[]>(this.categoryItemsURL+"?id="+id);
   }
   insert_user(user:any){
-    const body = JSON.stringify(user);
+    //const body = JSON.stringify(user);
     //return this.http.post<[]>(this.insertURL,body);
-    return this.http.post<[]>(`${this.baseURL0}/signup_api.php`,body);
+    return this.http.post<[]>(`${this.baseURL0}/signup_api.php`,user);
   }
   login_user(user:any){
-    const body = JSON.stringify(user);
+    //const body = JSON.stringify(user);
     //return this.http.post<[]>(this.loginURL,body);
-    return this.http.post<[]>(`${this.baseURL0}/login.php`,body);
+    return this.http.post<[]>(`${this.baseURL0}/login.php`,user);
   }
   get_user(id:any){
-    const body = JSON.stringify(id);
+    //const body = JSON.stringify(id);
     //return this.http.post<[]>(this.userURL,body);
-    return this.http.post<[]>(`${this.baseURL0}/get_user.php`,body);
+    return this.http.post<[]>(`${this.baseURL0}/get_user.php`,id);
   }
   get_alluser(){
     return this.http.get<[]>(this.allusersURL);
