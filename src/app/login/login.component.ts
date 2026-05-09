@@ -70,8 +70,8 @@ export class LoginComponent {
         this.msg3="Email not found.";
       }
     },error:(err)=>{
-
-    console.log("ERROR", err);})
+    console.log("ERROR", err);
+  }})
   }
   // email = "";
   // pass = "";
