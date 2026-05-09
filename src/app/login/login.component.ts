@@ -69,7 +69,9 @@ export class LoginComponent {
       else if(this.res["message"]=="Email not found"){
         this.msg3="Email not found.";
       }
-    }})
+    },error:(err)=>{
+
+    console.log("ERROR", err);})
   }
   // email = "";
   // pass = "";
