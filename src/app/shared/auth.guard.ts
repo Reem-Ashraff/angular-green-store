@@ -23,16 +23,16 @@ export class AuthGuard implements CanActivate {
 
       if (route.data['role'] && route.data['role'].indexOf(userRole) === -1) {
         if(userRole == 'admin'){
-          this.router.navigate(['adminpage']);
+          this.router.navigate(['/adminpage']);
         }
         else{
-          this.router.navigate(['home']);
+          this.router.navigate(['/home']);
         }
         return false;
       }
       return true;
     }
-    this.router.navigate(['login']);
+    this.router.navigate(['/login']);
     return false;
   }
     // if (this.auth.isLogin()) {
