@@ -68,7 +68,7 @@ export class ApiService {
   get_user(id:any){
     //const body = JSON.stringify(id);
     //return this.http.post<[]>(this.userURL,body);
-    return this.http.post<[]>(`${this.baseURL0}/get_user.php`,id);
+    return this.http.post<[]>(`${this.baseURL0}/get_user.php`,{user_id:id});
   }
   get_alluser(){
     return this.http.get<[]>(this.allusersURL);
