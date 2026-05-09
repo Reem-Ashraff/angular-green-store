@@ -44,7 +44,7 @@ export class LoginComponent {
         this.msg="you loged in successfully.";
         localStorage.setItem("log","Log out");
         this.apiservice.user_id = this.res["user_id"];
-        this.apiservice.get_user(this.apiservice.user_id)
+        this.apiservice.get_user(this.res["user_id"])
         .subscribe({next:(data:any)=>{
           this.apiservice.userdata = data;
           this.apiservice.storeuser=localStorage.setItem("username",this.apiservice.userdata[0]["username"]);
@@ -52,7 +52,7 @@ export class LoginComponent {
           localStorage.setItem("user_role",this.apiservice.userdata[0]["type"]);
           
         }})
-        this.apiservice.get_cart(this.apiservice.user_id)
+        this.apiservice.get_cart(this.res["user_id"])
         .subscribe({next:(data:any)=>{
           this.cartProducts = data
           this.products = localStorage.setItem("cart_items",JSON.stringify(this.cartProducts))
