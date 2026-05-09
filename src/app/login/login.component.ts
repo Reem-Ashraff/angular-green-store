@@ -38,12 +38,13 @@ export class LoginComponent {
     this.apiservice.login_user(this.form.value)
     .subscribe({next:(data:any)=>{
       this.res = data;
-      this.apiservice.user_id = this.res["user_id"];
-      console.log(this.apiservice.user_id);
+      //this.apiservice.user_id = this.res["user_id"];
+      //console.log(this.apiservice.user_id);
       if(this.res["message"]=="you loged in successfully."){
         this.msg="you loged in successfully.";
         localStorage.setItem("log","Log out");
         this.apiservice.user_id = this.res["user_id"];
+        console.log(this.apiservice.user_id);
         localStorage.setItem("user_id",this.apiservice.user_id);
         this.apiservice.get_user(this.apiservice.user_id)
         .subscribe({next:(data:any)=>{
