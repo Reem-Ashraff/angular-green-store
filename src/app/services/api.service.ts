@@ -80,7 +80,7 @@ export class ApiService {
   get_cart(id:any){
     //const body = JSON.stringify(id);
     //return this.http.post<[]>(this.getcartURL,body);
-    return this.http.post<[]>(`${this.baseURL0}/get_cart.php`,id);
+    return this.http.post<[]>(`${this.baseURL0}/get_cart.php`,{user_id:id});
   }
   delete_item(id:any){
     const body = JSON.stringify(id);
