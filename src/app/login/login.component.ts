@@ -46,7 +46,7 @@ export class LoginComponent {
         this.apiservice.user_id = this.res["user_id"];
         console.log(this.apiservice.user_id);
         localStorage.setItem("user_id",this.apiservice.user_id);
-        this.apiservice.get_user(this.apiservice.user_id)
+        this.apiservice.get_user(Number(this.apiservice.user_id))
         .subscribe({next:(data:any)=>{
           this.apiservice.userdata = data;
           console.log(this.apiservice.userdata);
@@ -56,7 +56,7 @@ export class LoginComponent {
           localStorage.setItem("user_role",this.apiservice.userdata[0]["type"]);
           
         }})
-        this.apiservice.get_cart(this.apiservice.user_id)
+        this.apiservice.get_cart(Number(this.apiservice.user_id))
         .subscribe({next:(data:any)=>{
           this.cartProducts = data
           console.log(this.cartProducts);
