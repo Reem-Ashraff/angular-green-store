@@ -68,7 +68,7 @@ export class ApiService {
   get_user(id:any){
     //const body = JSON.stringify(id);
     //return this.http.post<[]>(this.userURL,body);
-    return this.http.post<[]>(`${this.baseURL0}/get_user.php`,{user_id:id});
+    return this.http.post<[]>(`${this.baseURL0}/get_user.php`,{user_id:Number(id)});
   }
   get_alluser(){
     return this.http.get<[]>(this.allusersURL);
@@ -80,7 +80,7 @@ export class ApiService {
   get_cart(id:any){
     //const body = JSON.stringify(id);
     //return this.http.post<[]>(this.getcartURL,body);
-    return this.http.post<[]>(`${this.baseURL0}/get_cart.php`,{user_id:id});
+    return this.http.post<[]>(`${this.baseURL0}/get_cart.php`,{user_id:Number(id)});
   }
   delete_item(id:any){
     const body = JSON.stringify(id);
