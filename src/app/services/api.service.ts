@@ -13,6 +13,7 @@ export class ApiService {
   user_id:any;
   userdata:any = null;
   baseURL0 = "https://dev-green-store-php.pantheonsite.io";
+  plantsHomeURL = "https://dev-green-store-php.pantheonsite.io/get_plants_home.php";
   baseURL = "https://dev-green-store-php.pantheonsite.io/get_plants.php";
   categoriesURL = "https://dev-green-store-php.pantheonsite.io/get_categories.php";
   insertURL="https://dev-green-store-php.pantheonsite.io/signup_api.php";
@@ -47,6 +48,9 @@ export class ApiService {
 
   get_plants(){
     return this.http.get<[]>(this.baseURL);
+  }
+  get_plants_home(){
+    return this.http.get<[]>(this.plantsHomeURL);
   }
   get_categories(){
     return this.http.get<[]>(this.categoriesURL);
