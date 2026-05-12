@@ -54,17 +54,16 @@ export class LoginComponent {
           this.apiservice.storeuser=localStorage.setItem("username",this.apiservice.userdata[0]["username"]);
           //this.apiservice.user_id = localStorage.setItem("user_id",this.apiservice.user_id);
           localStorage.setItem("user_role",this.apiservice.userdata[0]["type"]);
-
-          this.apiservice.get_cart(Number(this.apiservice.user_id))
+        }})
+        this.apiservice.get_cart(Number(this.apiservice.user_id))
           .subscribe({next:(data:any)=>{
             this.cartProducts = data
             console.log(this.cartProducts);
             console.log(data);
-            this.products = localStorage.setItem("cart_items",JSON.stringify(this.cartProducts))
+            this.products = localStorage.setItem("cart_items",this.cartProducts)
             localStorage.setItem("items_num",this.cartProducts.length)
             this.router.navigate(["/home"]);
           }})
-        }})
         
         //this.router.navigate(["/home"]);
       }
