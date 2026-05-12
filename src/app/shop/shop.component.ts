@@ -133,31 +133,31 @@ export class ShopComponent {
 
   get_value(event:any){
     if(event.target.value == ""){
-      this.apiservice.baseURL="http://localhost:8080/green_store_apis/get_plants.php";
+      this.apiservice.baseURL="https://dev-green-store-php.pantheonsite.io/get_plants.php";
       this.ngOnInit();
     }
     else if(event.target.value == "Air purifying"){
-      this.apiservice.baseURL="http://localhost:8080/green_store_apis/air_purifying_get.php";
+      this.apiservice.baseURL="https://dev-green-store-php.pantheonsite.io/air_purifying_get.php";
       this.ngOnInit();
     }
     else if(event.target.value == "Ceramic pots"){
-      this.apiservice.baseURL="http://localhost:8080/green_store_apis/ceramic_pots_get.php";
+      this.apiservice.baseURL="https://dev-green-store-php.pantheonsite.io/ceramic_pots_get.php";
       this.ngOnInit();
     }
     else if(event.target.value == "Herbs seeds"){
-      this.apiservice.baseURL="http://localhost:8080/green_store_apis/herbs_seeds_get.php";
+      this.apiservice.baseURL="https://dev-green-store-php.pantheonsite.io/herbs_seeds_get.php";
       this.ngOnInit();
     }
     else if(event.target.value == "Indoor Plants"){
-      this.apiservice.baseURL="http://localhost:8080/green_store_apis/indoor_Plants_get.php";
+      this.apiservice.baseURL="https://dev-green-store-php.pantheonsite.io/indoor_Plants_get.php";
       this.ngOnInit();
     }
     else if(event.target.value == "Low maintenance"){
-      this.apiservice.baseURL="http://localhost:8080/green_store_apis/low_maintenance_get.php";
+      this.apiservice.baseURL="https://dev-green-store-php.pantheonsite.io/low_maintenance_get.php";
       this.ngOnInit();
     }
     else if(event.target.value == "Plant accessories"){
-      this.apiservice.baseURL="http://localhost:8080/green_store_apis/plant_accessories_get.php";
+      this.apiservice.baseURL="https://dev-green-store-php.pantheonsite.io/plant_accessories_get.php";
       this.ngOnInit();
     }
   }
