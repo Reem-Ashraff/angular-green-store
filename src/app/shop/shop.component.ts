@@ -111,6 +111,7 @@ export class ShopComponent {
       this.Shown = false;
       this.shopShow=false;
       this.checkShow = true;
+      window.location.reload();
     }
     else if(this.log == "Log in"){
       this.newproduct = {
