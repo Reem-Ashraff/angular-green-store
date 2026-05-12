@@ -19,7 +19,7 @@ import { UpdatePlantComponent } from './update-plant/update-plant.component';
 import { CheckOrderComponent } from './check-order/check-order.component';
 
 const routes: Routes = [
-  {path:"home",component:HomeComponent,canActivate:[AuthGuard],data:{role:["user"]}},
+  {path:"home",component:HomeComponent},
   {path:"login",component:LoginComponent},
   {path:"about",component:AboutComponent,canActivate:[AuthGuard],data:{role:["user"]}},
   {path:"signin",component:SigninComponent},
