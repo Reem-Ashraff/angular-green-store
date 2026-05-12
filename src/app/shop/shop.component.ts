@@ -107,7 +107,7 @@ export class ShopComponent {
       }
       this.apiservice.addToCart(this.newproduct)
       .subscribe({next:(data:any)=>{}});
-      window.location.reload();
+      //window.location.reload();
       this.Shown = false;
       this.shopShow=false;
       this.checkShow = true;
