@@ -72,8 +72,8 @@ export class HomeComponent {
   }
 
   ngOnInit(){
-    this.apiservice.baseURL="https://dev-green-store-php.pantheonsite.io/get_plants_home.php";
-    this.apiservice.get_plants()
+    //this.apiservice.baseURL="https://dev-green-store-php.pantheonsite.io/get_plants_home.php";
+    this.apiservice.get_plants_home()
     .subscribe({next:(data:any)=>{
       for(let item of data){
         item.p_image=this.apiservice.baseURL0+item.p_image
