@@ -60,7 +60,7 @@ export class LoginComponent {
             this.cartProducts = data
             console.log(this.cartProducts);
             console.log(data);
-            this.products = localStorage.setItem("cart_items",this.cartProducts)
+            this.products = localStorage.setItem("cart_items",JSON.stringify(this.cartProducts))
             localStorage.setItem("items_num",this.cartProducts.length)
             this.router.navigate(["/home"]);
           }})
