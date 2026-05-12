@@ -27,7 +27,7 @@ const routes: Routes = [
   {path:"checkOrder",component:CheckOrderComponent,canActivate:[AuthGuard],data:{role:["user"]}},
   {
     path:"",
-    redirectTo:"/login",
+    redirectTo:"/home",
     pathMatch:"full"
   },
   {path:"adminpage",component:AdminPageComponent,data:{role:["admin"]}},
