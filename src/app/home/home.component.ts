@@ -103,9 +103,12 @@ export class HomeComponent {
         "item_price":plant_price
       }
       this.apiservice.addToCart(this.newproduct)
-      .subscribe({next:(data:any)=>{}});
-      this.Shown = false;
-      window.location.reload();
+      .subscribe({next:(data:any)=>{
+        this.Shown = false;
+        window.location.reload();
+      }});
+      //this.Shown = false;
+      //window.location.reload();
     }
     else if(this.log == "Log in"){
       this.newproduct = {
