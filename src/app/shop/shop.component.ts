@@ -106,12 +106,17 @@ export class ShopComponent {
         "item_price":plant_price
       }
       this.apiservice.addToCart(this.newproduct)
-      .subscribe({next:(data:any)=>{}});
+      .subscribe({next:(data:any)=>{
+        this.Shown = false;
+        this.shopShow=false;
+        this.checkShow = true;
+        window.location.reload();
+      }});
       //window.location.reload();
-      this.Shown = false;
-      this.shopShow=false;
-      this.checkShow = true;
-      window.location.reload();
+      //this.Shown = false;
+      //this.shopShow=false;
+      //this.checkShow = true;
+      //window.location.reload();
     }
     else if(this.log == "Log in"){
       this.newproduct = {
