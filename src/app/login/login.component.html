@@ -23,10 +23,6 @@
                                         <div *ngIf="f['password'].errors && f['password'].errors['required']">Password is required.</div>
                                 </div>
                         </div>
-                        <div class="d-flex justify-content-between mb-4">
-                                <div class="check"><input type="checkbox">Remember Me</div>
-                                <a href="#" class="link">Forgot password?</a>
-                        </div>
                         <input type="submit" value="Log in" class="mb-3 button" [disabled]="form.invalid" (click)="submit()">
                 </form>
                 <p class="mb-4">Don't have an account? <a href="/signin">Sign Up</a></p>
